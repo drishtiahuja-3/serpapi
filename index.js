@@ -7,6 +7,9 @@ const API_KEY = process.env.API_KEY;
 const app =express();
 app.use(cors())
 
+app.get("/",  (req, res) => {
+    res.send("working...");
+}
 app.get("/serp-api", async (req, res) => {
     const query = req.query.query;
     const type = req.query.type || "all";
